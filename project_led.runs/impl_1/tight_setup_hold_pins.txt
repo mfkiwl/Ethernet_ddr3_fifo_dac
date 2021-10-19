@@ -1,0 +1,93 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                  PHY_RXC |                  PHY_RXC |      iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/U_CDONE/I_YESLUT6.I_YES_OREG.O_reg_reg/D|
+|                  PHY_RXC |                  PHY_RXC |        iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.I_YES_OREG.O_reg_reg/D|
+|                  PHY_RXC |                  PHY_RXC |        iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.I_YES_OREG.O_reg_reg/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[5]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[2]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[4]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[0]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[3]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[1]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[10]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[7]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[8]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[9]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/iwcnt_reg[6]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D|
+|                  PHY_RXC |                  PHY_RXC |                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_wr_en_reg/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[0]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[2]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[8]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[9]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[1]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[5]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[6]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[7]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[10]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[4]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[3]/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[10]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[5]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[4]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[7]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[6]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[3]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[0]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[2]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[9]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[8]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/iscnt_reg[1]/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q/R|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q/CE|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_trig/N_DDR_TC.N_DDR_TC_INST[0].U_TC/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q/D|
+|                  PHY_RXC |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D|
+|                  PHY_RXC |             clk_out2_pll |                                                                             ipsend_inst/tx_state_reg[0]/D|
+|                  PHY_RXC |             clk_out2_pll |                                                                             ipsend_inst/tx_state_reg[1]/D|
+|             clk_out2_pll |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg0_reg/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[9]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[7]/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[12]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[8]/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[11]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[4]/D|
+|             clk_out2_pll |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/temp_reg0_reg/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[13]/D|
+|             clk_out2_pll |                  PHY_RXC |    iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[10]/D|
+|             clk_out2_pll |                  PHY_RXC |    iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[11]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[8]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[6]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[4]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[2]/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[15]/D|
+|             clk_out2_pll |                  PHY_RXC |                           iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_regs/s_dclk_flag_sync1_reg/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[1]/D|
+|                  PHY_RXC |             clk_out2_pll |                                                                        ipsend_inst/eth_header_reg[5][6]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[9]/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[14]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[5]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[6]/D|
+|             clk_out2_pll |                  PHY_RXC |     iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/cfg_data_vec_sync1_reg[3]/D|
+|             clk_out2_pll |                  PHY_RXC |                              iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/use_probe_debug_circuit_2_reg/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[5]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[3]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_2_reg[0]/D|
+|             clk_out2_pll |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/temp_reg0_reg/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[7]/D|
+|             clk_out2_pll |                  PHY_RXC |iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg0_reg/D|
+|             clk_out2_pll |                  PHY_RXC |                                iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[10]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[1]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[2]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[0]/D|
+|             clk_out2_pll |                  PHY_RXC |                                 iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_2_reg[1]/D|
+|             clk_out2_pll |                  PHY_RXC |                                       iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/en_adv_trigger_2_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

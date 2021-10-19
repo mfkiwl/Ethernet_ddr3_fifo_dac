@@ -1,0 +1,565 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 29 11:01:20 2021
+# Process ID: 17975
+# Current directory: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1
+# Command line: vivado -log test_ethernet_ddr3_fido.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_ethernet_ddr3_fido.tcl
+# Log file: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/test_ethernet_ddr3_fido.vds
+# Journal file: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source test_ethernet_ddr3_fido.tcl -notrace
+Command: synth_design -top test_ethernet_ddr3_fido -part xc7a35tftg256-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17997
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2339.273 ; gain = 0.000 ; free physical = 5245 ; free virtual = 11909
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'test_ethernet_ddr3_fido' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter WRITE bound to: 3'b001 
+	Parameter READ bound to: 3'b010 
+	Parameter PAUSE bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'pll' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (1#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/pll_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'deepfifo' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/deepfifo.v:23]
+	Parameter base_addr bound to: 0 - type: integer 
+	Parameter addr_width bound to: 32 - type: integer 
+	Parameter log2_ram_size_addr bound to: 27 - type: integer 
+	Parameter log2_word_width bound to: 6 - type: integer 
+	Parameter log2_fifo_words bound to: 7 - type: integer 
+	Parameter log2_burst_words bound to: 4 - type: integer 
+	Parameter fifo_threshold bound to: 64 - type: integer 
+	Parameter log2_word_addr_size bound to: 3 - type: integer 
+	Parameter log2_words_in_ram bound to: 24 - type: integer 
+	Parameter log2_bursts_in_ram bound to: 20 - type: integer 
+	Parameter word_width bound to: 64 - type: integer 
+	Parameter bursts_in_ram bound to: 1048576 - type: integer 
+	Parameter burst_words bound to: 16 - type: integer 
+	Parameter burst_addr_size bound to: 128 - type: integer 
+	Parameter fifo_words bound to: 128 - type: integer 
+	Parameter strobe_width bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'deepfifo' (2#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/deepfifo.v:23]
+WARNING: [Synth 8-689] width (16) of port connection 'axi_wstrb' does not match port width (8) of module 'deepfifo' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:205]
+INFO: [Synth 8-6157] synthesizing module 'ddr3' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ddr3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ddr3' (3#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ddr3_stub.v:5]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'ddr3' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:259]
+WARNING: [Synth 8-689] width (16) of port connection 's_axi_wstrb' does not match port width (8) of module 'ddr3' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:272]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'ddr3' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:285]
+WARNING: [Synth 8-7071] port 'device_temp_i' of module 'ddr3' is unconnected for instance 'ddr3_inst' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:226]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'ddr3' is unconnected for instance 'ddr3_inst' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:226]
+WARNING: [Synth 8-7023] instance 'ddr3_inst' of module 'ddr3' has 66 connections declared, but only 64 given [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:226]
+INFO: [Synth 8-6157] synthesizing module 'fifo_pre' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/fifo_pre_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_pre' (4#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/fifo_pre_stub.v:6]
+WARNING: [Synth 8-689] width (8) of port connection 'rd_data_count' does not match port width (7) of module 'fifo_pre' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:324]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'fifo_pre' is unconnected for instance 'fifo_pre_512' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:314]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'fifo_pre' is unconnected for instance 'fifo_pre_512' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:314]
+WARNING: [Synth 8-7023] instance 'fifo_pre_512' of module 'fifo_pre' has 13 connections declared, but only 11 given [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:314]
+INFO: [Synth 8-6157] synthesizing module 'fifo_post' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/fifo_post_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_post' (5#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/fifo_post_stub.v:6]
+WARNING: [Synth 8-689] width (8) of port connection 'wr_data_count' does not match port width (7) of module 'fifo_post' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:341]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'fifo_post' is unconnected for instance 'fifo_post_512' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:330]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'fifo_post' is unconnected for instance 'fifo_post_512' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:330]
+WARNING: [Synth 8-7023] instance 'fifo_post_512' of module 'fifo_post' has 13 connections declared, but only 11 given [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:330]
+INFO: [Synth 8-6157] synthesizing module 'ipsend' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/ipsend.v:2]
+	Parameter ICMP bound to: 8'b00000001 
+	Parameter UDP bound to: 8'b00010001 
+	Parameter IDLE bound to: 8'b00000000 
+	Parameter PREPARE_ARP bound to: 8'b00000001 
+	Parameter PREPARE_UDP bound to: 8'b00000010 
+	Parameter PREPARE_ICMP bound to: 8'b00000011 
+	Parameter SEND_ARP bound to: 8'b00000100 
+	Parameter SEND_ICMP bound to: 8'b00000101 
+	Parameter SEND_UDP bound to: 8'b00000110 
+	Parameter DELAY bound to: 8'b11111111 
+	Parameter MAC1 bound to: 8'b00000000 
+	Parameter MAC2 bound to: 8'b00011100 
+	Parameter MAC3 bound to: 8'b00100011 
+	Parameter MAC4 bound to: 8'b00010111 
+	Parameter MAC5 bound to: 8'b01001010 
+	Parameter MAC6 bound to: 8'b11001100 
+	Parameter IP1 bound to: 8'b11000000 
+	Parameter IP2 bound to: 8'b10101000 
+	Parameter IP3 bound to: 8'b00000000 
+	Parameter IP4 bound to: 8'b11011110 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/ipsend.v:139]
+INFO: [Synth 8-6157] synthesizing module 'ila_2' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ila_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_2' (6#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ila_2_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'eth_tx_dbg'. This will prevent further optimization [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/ipsend.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'ipsend' (7#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/ipsend.v:2]
+INFO: [Synth 8-6157] synthesizing module 'crc' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/crc.v:5]
+	Parameter Tp bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'crc' (8#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/crc.v:5]
+INFO: [Synth 8-6157] synthesizing module 'iprecieve' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/iprecieve.v:2]
+	Parameter idle bound to: 8'b00000000 
+	Parameter rx_55 bound to: 8'b00000001 
+	Parameter rx_D5 bound to: 8'b00000010 
+	Parameter rx_MAC bound to: 8'b00000011 
+	Parameter rx_ETH_type bound to: 8'b00000100 
+	Parameter rx_ARP_or_IPv4 bound to: 8'b00000101 
+	Parameter rx_ICMP_or_UDP bound to: 8'b00000110 
+	Parameter rx_UDP_Data bound to: 8'b00000111 
+	Parameter ICMP bound to: 8'b00000001 
+	Parameter TCP bound to: 8'b00000110 
+	Parameter UDP bound to: 8'b00010001 
+	Parameter FPGA_IP1 bound to: 8'b11000000 
+	Parameter FPGA_IP2 bound to: 8'b10101000 
+	Parameter FPGA_IP3 bound to: 8'b00000000 
+	Parameter FPGA_IP4 bound to: 8'b11011110 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/iprecieve.v:112]
+INFO: [Synth 8-6157] synthesizing module 'ila_1' [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_1' (9#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/.Xil/Vivado-17975-pc/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'eth_rx_dbg'. This will prevent further optimization [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/iprecieve.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'iprecieve' (10#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/iprecieve.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:476]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:482]
+INFO: [Synth 8-6155] done synthesizing module 'test_ethernet_ddr3_fido' (11#1) [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/new/test_ethernet_ddr3_fido.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2339.273 ; gain = 0.000 ; free physical = 6008 ; free virtual = 12673
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2339.273 ; gain = 0.000 ; free physical = 6018 ; free virtual = 12676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2339.273 ; gain = 0.000 ; free physical = 6018 ; free virtual = 12676
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2339.273 ; gain = 0.000 ; free physical = 6009 ; free virtual = 12667
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/ila_1_synth_1/ila_1/ila_1_in_context.xdc] for cell 'iprecieve_inst/eth_rx_dbg'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/ila_1_synth_1/ila_1/ila_1_in_context.xdc] for cell 'iprecieve_inst/eth_rx_dbg'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/ila_2_synth_1/ila_2/ila_2_in_context.xdc] for cell 'ipsend_inst/eth_tx_dbg'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/ila_2_synth_1/ila_2/ila_2_in_context.xdc] for cell 'ipsend_inst/eth_tx_dbg'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll_inst'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll_inst'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc] for cell 'ddr3_inst'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc] for cell 'ddr3_inst'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/fifo_pre/fifo_pre/fifo_pre_in_context.xdc] for cell 'fifo_pre_512'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/fifo_pre/fifo_pre/fifo_pre_in_context.xdc] for cell 'fifo_pre_512'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/fifo_post/fifo_post/fifo_post_in_context.xdc] for cell 'fifo_post_512'
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/fifo_post/fifo_post/fifo_post_in_context.xdc] for cell 'fifo_post_512'
+Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc]
+WARNING: [Vivado 12-507] No nets matched 'PHY_RXC_IBUF'. [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc:71]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc:114]
+Finished Parsing XDC File [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/test_ethernet_ddr3_fido_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/constrs_1/new/LED.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_ethernet_ddr3_fido_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_ethernet_ddr3_fido_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.176 ; gain = 0.000 ; free physical = 5905 ; free virtual = 12568
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2371.176 ; gain = 0.000 ; free physical = 5905 ; free virtual = 12568
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'fifo_pre_512' at clock pin 'wr_clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'iprecieve_inst/eth_rx_dbg' at clock pin 'clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ipsend_inst/eth_tx_dbg' at clock pin 'clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5986 ; free virtual = 12649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5986 ; free virtual = 12649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/pll/pll/pll_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/pll/pll/pll_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_rst_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_rst_n. (constraint file  /home/master/Work/test_ethernet_ddr3_fifo/project_led.srcs/sources_1/ip/ddr3/ddr3/ddr3_in_context.xdc, line 97).
+Applied set_property KEEP_HIERARCHY = SOFT for pll_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ddr3_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for fifo_pre_512. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for fifo_post_512. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for iprecieve_inst/eth_rx_dbg. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ipsend_inst/eth_tx_dbg. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5986 ; free virtual = 12649
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'iprecieve'
+INFO: [Synth 8-6159] Found Keep on FSM register 'rx_state_reg' in module 'iprecieve', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                         00000000 |                         00000000
+                   rx_55 |                         00000001 |                         00000001
+                   rx_D5 |                         00000010 |                         00000010
+                  rx_MAC |                         00000011 |                         00000011
+             rx_ETH_type |                         00000100 |                         00000100
+          rx_ARP_or_IPv4 |                         00000101 |                         00000101
+          rx_ICMP_or_UDP |                         00000110 |                         00000110
+             rx_UDP_Data |                         00000111 |                         00000111
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5980 ; free virtual = 12644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   25 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   4 Input   21 Bit       Adders := 2     
+	   3 Input   21 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 1     
+	  32 Input   21 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 2     
+	  10 Input   20 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 6     
+	   4 Input    9 Bit       Adders := 1     
+	   4 Input    8 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
+	   3 Input      1 Bit         XORs := 6     
+	   6 Input      1 Bit         XORs := 7     
+	   8 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 4     
+	   7 Input      1 Bit         XORs := 7     
+	  10 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 3     
+	  12 Input      1 Bit         XORs := 1     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	              512 Bit    Registers := 1     
+	              504 Bit    Registers := 1     
+	              216 Bit    Registers := 1     
+	              152 Bit    Registers := 1     
+	               88 Bit    Registers := 1     
+	               56 Bit    Registers := 1     
+	               48 Bit    Registers := 3     
+	               32 Bit    Registers := 29    
+	               25 Bit    Registers := 1     
+	               21 Bit    Registers := 3     
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 55    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 19    
+	   8 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 8     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 9     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 87    
+	   4 Input    8 Bit        Muxes := 21    
+	   8 Input    8 Bit        Muxes := 8     
+	   6 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 2     
+	  30 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 2     
+	  64 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 93    
+	   8 Input    1 Bit        Muxes := 24    
+	   4 Input    1 Bit        Muxes := 17    
+	   6 Input    1 Bit        Muxes := 15    
+	   7 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5947 ; free virtual = 12614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5832 ; free virtual = 12499
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5800 ; free virtual = 12467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5802 ; free virtual = 12468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module ddr3_inst has unconnected pin device_temp_i[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|iprecieve   | IPv4_layer_t_reg[127] | 6      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|iprecieve   | IPv4_layer_t_reg[79]  | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|iprecieve   | ARP_layer_reg[79]     | 7      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ila_2         |         1|
+|2     |ila_1         |         1|
+|3     |pll           |         1|
+|4     |ddr3          |         1|
+|5     |fifo_pre      |         1|
+|6     |fifo_post     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |ddr3      |     1|
+|2     |fifo_post |     1|
+|3     |fifo_pre  |     1|
+|4     |ila       |     2|
+|6     |pll       |     1|
+|7     |BUFG      |     1|
+|8     |CARRY4    |   201|
+|9     |LUT1      |   125|
+|10    |LUT2      |   189|
+|11    |LUT3      |   473|
+|12    |LUT4      |   237|
+|13    |LUT5      |   161|
+|14    |LUT6      |   698|
+|15    |MUXF7     |    63|
+|16    |MUXF8     |    28|
+|17    |SRL16E    |    24|
+|18    |FDCE      |     1|
+|19    |FDPE      |    32|
+|20    |FDRE      |  2602|
+|21    |FDR       |     8|
+|22    |FDSE      |    10|
+|23    |IBUF      |    10|
+|24    |OBUF      |    23|
+|25    |OBUFT     |     2|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.176 ; gain = 31.902 ; free physical = 5798 ; free virtual = 12464
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 12 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2371.176 ; gain = 0.000 ; free physical = 5850 ; free virtual = 12517
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2371.184 ; gain = 31.902 ; free physical = 5850 ; free virtual = 12517
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2371.184 ; gain = 0.000 ; free physical = 5937 ; free virtual = 12603
+INFO: [Netlist 29-17] Analyzing 300 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 24 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2371.184 ; gain = 0.000 ; free physical = 5886 ; free virtual = 12552
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  FDR_1 => FDRE (inverted pins: C): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 24 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:56 . Memory (MB): peak = 2371.184 ; gain = 32.023 ; free physical = 6046 ; free virtual = 12712
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/synth_1/test_ethernet_ddr3_fido.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_ethernet_ddr3_fido_utilization_synth.rpt -pb test_ethernet_ddr3_fido_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 29 11:02:25 2021...

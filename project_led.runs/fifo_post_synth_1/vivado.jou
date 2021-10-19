@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 29 10:54:07 2021
+# Process ID: 16375
+# Current directory: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/fifo_post_synth_1
+# Command line: vivado -log fifo_post.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_post.tcl
+# Log file: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/fifo_post_synth_1/fifo_post.vds
+# Journal file: /home/master/Work/test_ethernet_ddr3_fifo/project_led.runs/fifo_post_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fifo_post.tcl -notrace

@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               8M
+Start Address      0x00000000
+End Address        0x007FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0021728B    Mar  3 12:17:53 2019    /home/master/Projects/HERMES/artix_rtl8211_arp_24.02.19/project_led.runs/impl_1/ethernet_test.bit

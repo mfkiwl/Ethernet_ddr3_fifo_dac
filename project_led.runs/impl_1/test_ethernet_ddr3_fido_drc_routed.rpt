@@ -1,0 +1,206 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Jul 29 11:06:44 2021
+| Host         : pc running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_drc -file test_ethernet_ddr3_fido_drc_routed.rpt -pb test_ethernet_ddr3_fido_drc_routed.pb -rpx test_ethernet_ddr3_fido_drc_routed.rpx
+| Design       : test_ethernet_ddr3_fido
+| Device       : xc7a35tftg256-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 22
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| BUFC-1      | Warning  | Input Buffer Connections                                    | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLCK-12     | Warning  | Clock Placer Checks                                         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| REQP-1571   | Warning  | connects_D                                                  | 12         |
+| REQP-1709   | Warning  | Clock output buffering                                      | 1          |
+| RPBF-3      | Warning  | IO port buffering is incomplete                             | 1          |
+| RTSTAT-10   | Warning  | No routable loads                                           | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer ddr3_inst/u_ddr3_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr3_inst/u_ddr3_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#2 Warning
+Input Buffer Connections  
+Input buffer ddr3_inst/u_ddr3_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr3_inst/u_ddr3_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net iprecieve_inst/fifo_dac_wr_clk is a gated clock net sourced by a combinational pin iprecieve_inst/fifo_dac_wr_clk_INST_0/O, cell iprecieve_inst/fifo_dac_wr_clk_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net ipsend_inst/eth_tx_dbg_i_1_n_0 is a gated clock net sourced by a combinational pin ipsend_inst/eth_tx_dbg_i_1/O, cell ipsend_inst/eth_tx_dbg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	PHY_RXC_IBUF_inst (IBUF.O) is locked to P16
+	PHY_RXC_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y2
+
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT iprecieve_inst/fifo_dac_wr_clk_INST_0 is driving clock pin of 250 cells. This could lead to large hold time violations. Involved cells are:
+fifo_pre_512/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i_reg,
+fifo_pre_512/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg,
+iprecieve_inst/eth_rx_dbg/inst/ack_reg1_reg[0],
+iprecieve_inst/eth_rx_dbg/inst/ack_reg2_reg[0],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/basic_trigger_reg,
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_2_reg[0],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_2_reg[1],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_reg[0],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/capture_qual_ctrl_reg[1],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[0],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[10],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[11],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[12],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[13],
+iprecieve_inst/eth_rx_dbg/inst/ila_core_inst/debug_data_in_sync1_reg[14]
+ (the first 15 of 250 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT ipsend_inst/eth_tx_dbg_i_1 is driving clock pin of 2757 cells. This could lead to large hold time violations. Involved cells are:
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_1_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_1_reg[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2_reg[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_reg[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_reg[2],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_ld_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_ld_reg[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_ld_temp_1_reg,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_ld_reg[0]
+ (the first 15 of 2757 listed)
+Related violations: <none>
+
+REQP-1571#1 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[0] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#2 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[10] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#3 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[11] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#4 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[1] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#5 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[2] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#6 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[3] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#7 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[4] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#8 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[5] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#9 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[6] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#10 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[7] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#11 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[8] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#12 Warning
+connects_D  
+The FDRE cell ddr3_inst/u_ddr3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[9] has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal ddr3_inst/u_ddr3_mig/u_ddr3_infrastructure/pll_clk3_out on the ddr3_inst/u_ddr3_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of ddr3_inst/u_ddr3_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port PHY_MDIO expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+45 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1],
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0],
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0],
+fifo_post_512/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/ENA_dly_D,
+fifo_post_512/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0],
+fifo_pre_512/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+ (the first 15 of 35 listed).
+Related violations: <none>
+
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tftg256-1" LaunchTime="1627545753">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="test_ethernet_ddr3_fido.vdi"/>
+  <File Type="BG-DRC" Name="test_ethernet_ddr3_fido.drc"/>
+  <File Type="BG-BGN" Name="test_ethernet_ddr3_fido.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="test_ethernet_ddr3_fido.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="test_ethernet_ddr3_fido.ltx"/>
+  <File Type="RBD_FILE" Name="test_ethernet_ddr3_fido.rbd"/>
+  <File Type="NPI_FILE" Name="test_ethernet_ddr3_fido.npi"/>
+  <File Type="RNPI_FILE" Name="test_ethernet_ddr3_fido.rnpi"/>
+  <File Type="CFI_FILE" Name="test_ethernet_ddr3_fido.cfi"/>
+  <File Type="RCFI_FILE" Name="test_ethernet_ddr3_fido.rcfi"/>
+  <File Type="PDI-FILE" Name="test_ethernet_ddr3_fido.pdi"/>
+  <File Type="BITSTR-MMI" Name="test_ethernet_ddr3_fido.mmi"/>
+  <File Type="BITSTR-BMM" Name="test_ethernet_ddr3_fido_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="test_ethernet_ddr3_fido.nky"/>
+  <File Type="BITSTR-RBT" Name="test_ethernet_ddr3_fido.rbt"/>
+  <File Type="BITSTR-MSK" Name="test_ethernet_ddr3_fido.msk"/>
+  <File Type="BG-BIN" Name="test_ethernet_ddr3_fido.bin"/>
+  <File Type="BG-BIT" Name="test_ethernet_ddr3_fido.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="test_ethernet_ddr3_fido_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="test_ethernet_ddr3_fido_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="test_ethernet_ddr3_fido_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="test_ethernet_ddr3_fido_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="test_ethernet_ddr3_fido_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="test_ethernet_ddr3_fido_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="test_ethernet_ddr3_fido_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="test_ethernet_ddr3_fido_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="test_ethernet_ddr3_fido_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="test_ethernet_ddr3_fido_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="test_ethernet_ddr3_fido_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="test_ethernet_ddr3_fido_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="test_ethernet_ddr3_fido_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="test_ethernet_ddr3_fido_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="test_ethernet_ddr3_fido_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="test_ethernet_ddr3_fido_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="test_ethernet_ddr3_fido_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="test_ethernet_ddr3_fido_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="test_ethernet_ddr3_fido_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="test_ethernet_ddr3_fido_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="test_ethernet_ddr3_fido_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="test_ethernet_ddr3_fido_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="test_ethernet_ddr3_fido_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="test_ethernet_ddr3_fido_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="test_ethernet_ddr3_fido_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="test_ethernet_ddr3_fido_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="test_ethernet_ddr3_fido_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="test_ethernet_ddr3_fido_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="test_ethernet_ddr3_fido_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="test_ethernet_ddr3_fido_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="test_ethernet_ddr3_fido_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="test_ethernet_ddr3_fido_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="test_ethernet_ddr3_fido_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="test_ethernet_ddr3_fido_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="test_ethernet_ddr3_fido_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="test_ethernet_ddr3_fido_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="test_ethernet_ddr3_fido_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="test_ethernet_ddr3_fido_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="test_ethernet_ddr3_fido_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="test_ethernet_ddr3_fido_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="test_ethernet_ddr3_fido_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="test_ethernet_ddr3_fido_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="test_ethernet_ddr3_fido.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="test_ethernet_ddr3_fido_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="test_ethernet_ddr3_fido_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="test_ethernet_ddr3_fido_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_init.rpt"/>
+  <File Type="PWROPT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="test_ethernet_ddr3_fido_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="test_ethernet_ddr3_fido_timing_summary_opted.rpt"/>
+  <File Type="PA-TCL" Name="test_ethernet_ddr3_fido.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/crc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/deepfifo.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/iprecieve.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ipsend.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_ethernet_ddr3_fido.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_ddr3_fifo.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ethernet_test.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ddr3/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="ddr3"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ddr3/mig_b.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="ddr3"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="test_ethernet_ddr3_fido"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/LED.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/LED.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ila_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_post"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_pre"/>
+  <BlockFileSet Type="BlockSrcs" Name="ddr3"/>
+  <BlockFileSet Type="BlockSrcs" Name="pll"/>
+</GenRun>
